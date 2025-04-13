@@ -1,5 +1,6 @@
 <script>
-  
+import {Page,HandlePage} from "../lib/pageStore";
+
 </script>
 
 <nav>
@@ -9,14 +10,15 @@
     <h4>Name</h4>
     <p>email client</p>
   </div>
+ 
   <ol>
-    <li> <img src="" alt=""> Dasboard</li>
-    <li> <img src="" alt=""> Manager Task</li>
+    <li role="button" onclick={()=>HandlePage("dashboard")}> <img src="" alt=""> Dashboard</li>
+    <li role="button" onclick={()=>HandlePage("manager-task")}> <img src="" alt=""> Manager Task</li>
     <li> <img src="" alt=""> <a href="">Create Task</a></li>
     <li> <img src="" alt=""> Team Members</li>
     <li> <img src="" alt=""> <a href="">Logout</a></li>
   </ol>
-</nav>
+ </nav>
 
 <style>
 nav {

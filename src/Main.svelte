@@ -25,20 +25,27 @@ border: 2px solid;
 max-width: 100vw;
 gap: 10px;
  display: grid;
-  grid-template-areas: 
+overflow: visible;
+grid-template-areas: 
     "header header"
     "nav content"
     "nav footer";
-
   grid-template-columns: 0.5fr 1fr;
 }
-header{
+.container header{
+position: sticky;
+top: 0;
+z-index: 10;
   grid-area: header;
   max-width: 100%;
   height: 15vh; 
 }
-.nav {
+.container .nav {
+position: sticky;
+top: 10vh;
+z-index: 10;
   grid-area: nav;
+background:white ;
 }
 .content{
    grid-area: content;
