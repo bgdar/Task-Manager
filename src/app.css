@@ -1,28 +1,25 @@
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+  /*warna yang bisa di gunakan */;
+  --blue-link:#1a73e8
 }
-a:hover {
-  color: #535bf2;
-}
-
+/*body menggunakan toogle untuk mode gelap terang */
 body {
-  background-color: #d3d3d3;
   box-sizing: border-box;
   margin: 0;
+ background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%); /* putih ke abu-abu */
   padding: 0;
+  color: #333;
   overflow-x: hidden;
+}
+body.dark{
+  background: linear-gradient(135deg, #2a2a2a 0%, #444 100%); /* gelap sedikit lebih terang */
+  color: #ddd;
 }
 
 button {
@@ -37,7 +34,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #3456cff;
+  border-color: #3456cf;
 }
 button:focus,
 button:focus-visible {

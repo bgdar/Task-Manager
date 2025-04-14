@@ -14,17 +14,21 @@ import ManagerTask from "../componentsMain/managerTask.svelte";
     <Dashboard/>
   {:else if $Page.name == "manager-task"}
     <ManagerTask/>
+  {:else if $Page.name == "team-members"}
+  <p>Team member page</p>
+
   {:else }
+  
     <p>pilih di kemana mau nav</p>
   {/if}
 
 <style>
 .judul{
-  margin: 1.2rem 0px 1.2rem 0px;
+  margin: 1rem 0px 1rem 0px;
   display: flex;
   justify-content: space-around;
   border-radius: 5px;
   border: 2px solid;
-  background-color: white;
+  box-shadow: 4px 2px 3px #000000;
 }
 </style>
