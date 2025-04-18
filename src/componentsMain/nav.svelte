@@ -15,7 +15,7 @@ import { LayoutDashboard,ClipboardCheck, NotebookPen, Users,LogOut } from 'lucid
   <ul>
     <li> <button on:click={()=>HandlePage("dashboard")}> <LayoutDashboard />Dashboard</button></li>
     <li><button on:click={()=>HandlePage("manager-task")}><ClipboardCheck />Manager Task</button></li>
-    <li ><button> <NotebookPen/> <a href="/crud.html">crud</a> </button></li>
+    <li ><button ><a href="/crud.html"> <NotebookPen/>crud</a> </button></li>
     <li> <button on:click={()=> HandlePage("team-members")}> <Users/> Team Members </button></li>
     <li> <button> <LogOut/> <a href="/logout">Logout</a> </button></li>
   </ul>
@@ -23,7 +23,7 @@ import { LayoutDashboard,ClipboardCheck, NotebookPen, Users,LogOut } from 'lucid
 
 <style>
 nav {
-box-shadow: 4px 2px 3px;
+box-shadow: 2px 1px 3px darkslateblue;
   border: 1px solid ;
   max-width: 20vw;
   text-align: center;

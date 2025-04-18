@@ -1,6 +1,6 @@
 <script>[]
 import Nav from "./componentsMain/nav.svelte";
-import Content from "./componentsMain/Content.svelte";
+import MainContent from "./componentsMain/MainContent.svelte";
 import { Moon, Sun } from "lucide-svelte";
 
 let mode = $state(false);
@@ -18,29 +18,28 @@ const handleMode = ()=>{
 
 </script>
 
-  
 <div class="container">
   <header>
     <h2>task Managers</h2>
-    <div class="menu">
-     
+    <div class="menu">    
       <button on:click={handleMode}>
         {#if mode}
-          <Sun/>
-        {:else}
           <Moon/>
+        {:else}
+          <Sun/>
         {/if}
       </button>
     </div>
   </header>
+
     <div class="nav">
       <Nav/>
     </div>
+
     <div class="content">
-      <Content/>
+      <MainContent/>
     </div>
 </div>
-
 
 <style>
 /*posisi header dan navbar tetap di tempat */
@@ -59,6 +58,7 @@ grid-template-areas:
 position: sticky;
 border: 1px solid;
 top: 0;
+left: 0;
 display: flex;
 justify-content: space-evenly;
 z-index: 10;
@@ -67,12 +67,11 @@ z-index: 10;
   height: 15vh; 
 }
 .container .nav {
-z-index: 10;
 top: 15vh;
+left: 0;
 max-height: calc(100vh - 20px);
 position: sticky;
   grid-area: nav;
-background:white ;
 }
 .content{
    grid-area: content;

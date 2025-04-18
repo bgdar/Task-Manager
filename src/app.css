@@ -4,28 +4,46 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  /*warna yang bisa di gunakan */;
-  --blue-link:#1a73e8
+}
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
 }
 /*body menggunakan toogle untuk mode gelap terang */
 body {
   box-sizing: border-box;
   margin: 0;
- background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%); /* putih ke abu-abu */
   padding: 0;
-  color: #333;
   overflow-x: hidden;
 }
 body.dark{
-  background: linear-gradient(135deg, #2a2a2a 0%, #444 100%); /* gelap sedikit lebih terang */
-  color: #ddd;
+  background-color: #333;
+  color: white;
 }
+
+.in-progress{
+  background-color:#d0f0fd ;
+  color: #269edc;
+}
+.pending{
+background-color:  #EEE7FB ;
+color: #A05ACF ;
+}
+.completed{
+background-color: #D9FBD9 ;
+color:#38A169;
+}
+
+
 
 button {
   border-radius: 8px;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+  padding: 0.4em 1.2em;
   font-size: 1em;
   font-weight: 300;
   font-family: inherit;

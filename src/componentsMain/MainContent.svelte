@@ -1,7 +1,10 @@
 <script>
+//File utaman yang menghandle CONtent
+
 import {Page} from "../lib/pageStore";
 import Dashboard from "./dashboard.svelte";
 import ManagerTask from "../componentsMain/managerTask.svelte";
+    import TeamMembers from "./team-members.svelte";
 
 </script>
 
@@ -15,20 +18,29 @@ import ManagerTask from "../componentsMain/managerTask.svelte";
   {:else if $Page.name == "manager-task"}
     <ManagerTask/>
   {:else if $Page.name == "team-members"}
-  <p>Team member page</p>
-
+    <TeamMembers/>
   {:else }
-  
-    <p>pilih di kemana mau nav</p>
+    <div class="label">
+    <h3>TASK MANAGER APP</h3>
+  </div>
   {/if}
 
 <style>
 .judul{
-  margin: 1rem 0px 1rem 0px;
+  margin: 0.4rem 0px 1rem 0px;
   display: flex;
   justify-content: space-around;
   border-radius: 5px;
   border: 2px solid;
-  box-shadow: 4px 2px 3px #000000;
+  box-shadow: 1px 2px 3px darkslateblue;
+}
+
+.label{
+text-align: center;
+}
+.label h3 {
+font-size: 20px;
+text-shadow: 1px 1px 2px darkslateblue;
+ font-family: fantasy;
 }
 </style>
