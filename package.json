@@ -1,0 +1,22 @@
+{
+  "name": "task-Manager-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.8.0",
+  "dependencies": {
+    "@type": "link:pg/@type",
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.14.1",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "pg": "^8.14.1",
+    "ts-node": "^10.9.2"
+  }
+}
