@@ -6,7 +6,7 @@
 
 
 <div class="members">
-    <CardTeamMember name="ahmad kanabawi" email="jjsjsj@gmail.com" />
+  <CardTeamMember name="ahmad kanabawi" email="jjsjsj@gmail.com" />
  <CardTeamMember name="ahmad kanabawi" email="jjsjsj@gmail.com" />
  <CardTeamMember name="ahmad kanabawi" email="jjsjsj@gmail.com" />
   <CardTeamMember name="ahmad kanabawi" email="jjsjsj@gmail.com" />

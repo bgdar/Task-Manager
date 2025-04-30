@@ -18,7 +18,10 @@ import { FilePlus2 } from 'lucide-svelte';
 <style>
 header{
  width: 100vw;
-border: 2px solid;
-}
+  border: 2px solid;
+display: flex;
+justify-content: space-around;
+align-content:center;
 
+}
 </style>

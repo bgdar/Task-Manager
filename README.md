@@ -7,8 +7,8 @@ Aplikasi yang menyimpan dan mengelola TASK user dengan pilihan sperti
 2. `server` = bagian server yang di handle dengan __node.js__ dan __express.js__
 
 ### folder | file info
-`componentsMain` = folder untuk Menyimpan component component untuk halaman utama __task Managers__
-    _`MainContent`_ = file Yang menghadle file file content di sebehnya
+`componentsMain` = folder untuk Menyimpan component component untuk halaman utama __task Managers_
+    _MainContent_ = file Yang menghadle file file content di sebehnya
 `lib` = folder yg menyimpan component yang di gunakan di component lain _sudah di pilih_
 
 ### katagory halaman berdasarkan file
@@ -17,6 +17,7 @@ Aplikasi yang menyimpan dan mengelola TASK user dengan pilihan sperti
     Menjadi halaman `Dasboard`
     Menjadi hamalan `Manager Task`
     Menjai hamalan `Menber Task`
+
 - __crud.html__ => entri untuk pengelolaaan task 
 
 ### example data

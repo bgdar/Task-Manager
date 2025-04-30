@@ -1,10 +1,11 @@
 <script>
 import { Page } from "../lib/pageStore";
+    import AddTask from "./addTask.svelte";
 
 </script>
 
 {#if $Page.name =="add-task"}
-  <p>add task page</p>
+  <AddTask/>
   {:else if $Page.name == "update-task"}
   <p>Update page </p>
   {:else if $Page.name == "delete-task"}

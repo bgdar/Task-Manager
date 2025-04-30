@@ -27,7 +27,7 @@ import ManagerTask from "../componentsMain/managerTask.svelte";
 
 <style>
 .judul{
-  margin: 0.4rem 0px 1rem 0px;
+  margin: 0.4rem ;
   display: flex;
   justify-content: space-around;
   border-radius: 5px;

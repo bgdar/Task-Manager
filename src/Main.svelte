@@ -5,28 +5,27 @@ import { Moon, Sun } from "lucide-svelte";
 
 let mode = $state(false);
 
-//fucntion untuk menghadle tema gelap dan terang
+//fucntion untuk menghadle tema gelap dan terang dengan menargetkan body 
 const handleMode = ()=>{
  mode = !mode
   if(mode){
-  document.body.classList.add("dark")
-}else{
-  document.body.classList.remove("dark")
-}
-
+    document.body.classList.add("dark")
+  }else{
+    document.body.classList.remove("dark")
+  }
 } 
 
 </script>
 
 <div class="container">
-  <header>
+  <header class={mode ? "header-dark" : "header-light"}>
     <h2>task Managers</h2>
     <div class="menu">    
-      <button on:click={handleMode}>
+      <button on:click={handleMode}  class={mode ? "button-dark" : "button-light"}>
         {#if mode}
-          <Moon/>
+          <Moon size={12}/>
         {:else}
-          <Sun/>
+          <Sun size={12}/>
         {/if}
       </button>
     </div>
@@ -46,7 +45,7 @@ const handleMode = ()=>{
 .container{
 border: 2px solid;
 max-width: 100vw;
-padding: 0.3rem;
+box-sizing: border-box;
  display: grid;
 overflow: visible;
 grid-template-areas: 
@@ -55,6 +54,7 @@ grid-template-areas:
   grid-template-columns: 20vw 80vw;
 }
 .container header{
+box-sizing: border-box;
 position: sticky;
 border: 1px solid;
 top: 0;
@@ -77,4 +77,6 @@ position: sticky;
    grid-area: content;
 }
 
+
+/*toogle end */
 </style>

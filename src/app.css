@@ -25,6 +25,24 @@ body.dark{
   color: white;
 }
 
+/* toogle class yang di gunakantart*/
+.header-dark{
+ background-color: #333 ;
+color: white;
+}
+.header-light {
+background-color: #eaeaea;
+color: #333;
+}
+.button-dark{
+  color: #3B82F6;
+}
+.button-light{
+  color:#10B981 ;
+}
+
+/*toogle end* */
+
 .in-progress{
   background-color:#d0f0fd ;
   color: #269edc;
