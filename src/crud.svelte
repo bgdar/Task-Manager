@@ -1,12 +1,11 @@
 <script>
 import { FilePlus2 } from 'lucide-svelte';
-    import Nav from './componentCrud/nav.svelte';
-    import MainContent from './componentCrud/MainContent.svelte';
+    import Nav from './crudPage/nav.svelte';
+    import MainContent from './crudPage/MainContent.svelte';
 
 </script>
 
 <header>
-  <h3>Task Managers</h3>
   
   <Nav/>
 </header>

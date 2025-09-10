@@ -3,8 +3,8 @@
 
 import {Page} from "../lib/pageStore";
 import Dashboard from "./dashboard.svelte";
-import ManagerTask from "../componentsMain/managerTask.svelte";
-    import TeamMembers from "./team-members.svelte";
+import ManagerTask from "./managerTask.svelte";
+import TeamMembers from "./team-members.svelte";
 
 </script>
 
@@ -13,6 +13,7 @@ import ManagerTask from "../componentsMain/managerTask.svelte";
   <h4>{$Page.name}</h4>
 </div>
 
+<!-- handle bagaiman content di tampilkan -->
   {#if $Page.name =="dashboard" }
     <Dashboard/>
   {:else if $Page.name == "manager-task"}
@@ -26,6 +27,7 @@ import ManagerTask from "../componentsMain/managerTask.svelte";
   {/if}
 
 <style>
+  
 .judul{
   margin: 0.4rem ;
   display: flex;

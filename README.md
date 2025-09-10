@@ -1,5 +1,5 @@
 # Task Managers
-Aplikasi yang menyimpan dan mengelola TASK user dengan pilihan sperti 
+Aplikasi yang menyimpan dan mengelola TASK user
 ---
 
 ## Main Branch
@@ -13,12 +13,12 @@ Aplikasi yang menyimpan dan mengelola TASK user dengan pilihan sperti
 
 ### katagory halaman berdasarkan file
             cek di navbar component
-- __index.html__ => Entri poin utama untuk file __main.js__ | __Main.svelte__
+- __index.html__ => Entri poin utama untuk file __main.js__ 
     Menjadi halaman `Dasboard`
     Menjadi hamalan `Manager Task`
     Menjai hamalan `Menber Task`
 
-- __crud.html__ => entri untuk pengelolaaan task 
+- __crud.html__ => entri untuk pengelolaaan task pada __crud.js__
 
 ### example data
 - data yang di dapat dari api server dapatkan dari __url tertentu__ dan simpan di 1 folder Api

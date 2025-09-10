@@ -63,83 +63,166 @@ document.body.style.overflow = "";
 </div>
 
 <style>
-.card{
-position: relative;
-  border: 2px solid ;
- padding: 10px;
-  border-radius: 8px;
-  box-shadow: 2px 1px 4px darkslateblue;
-box-sizing: border-box;
-padding: 0.5rem;
-flex-shrink: 1;
-}
-.card .description {
-max-width: 240px;
-}
-.card .description p{
- font-weight: 400;
- font-family: 'Courier New', Courier, monospace;
-}
-.card .total-task {
-width: 100%;
-}
-.card .total-task p {
-  font-weight: 300;
-  font-family: sans-serif;
-}
-.card .total-task p span{
-  font-weight: bold;
-  font-family: sans-serif;
-}
-.card .date{
- display: flex;
-border: 1px solid;
-width: 100%;
-justify-content: space-between;
-}
-.card .member {
-display: flex;
-justify-content: space-evenly;
-padding: 10px;
+.card {
+  position: relative;
+  border: 1px solid #3f3f61;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  box-sizing: border-box;
+  transition: all 0.4s ease-in-out;
+
+  cursor: pointer;
+  overflow: hidden;
 }
 
-/*style untuk view mx */
+.card .judul h3 {
+  margin: 0.3rem 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+
+}
+
+.card .judul p {
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  background: #6c63ff;
+
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.card .description {
+  max-width: 280px;
+  margin: 0.5rem 0;
+}
+.card .description p {
+  font-weight: 400;
+  font-size: 0.9rem;
+  font-family: "Inter", sans-serif;
+  line-height: 1.4rem;
+
+}
+
+.card .total-task {
+  width: 100%;
+  margin: 0.5rem 0;
+}
+.card .total-task p {
+  font-size: 0.85rem;
+
+}
+.card .total-task p span {
+  font-weight: bold;
+
+}
+.card .total-task progress {
+  width: 100%;
+  height: 8px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.card .total-task progress::-webkit-progress-bar {
+  background-color: #3a3a55;
+  border-radius: 5px;
+}
+.card .total-task progress::-webkit-progress-value {
+  background: linear-gradient(90deg, #6c63ff, #3dd6d0);
+  border-radius: 5px;
+}
+
+/* date box */
+.card .date {
+  display: flex;
+  border: 1px solid #3f3f61;
+  border-radius: 6px;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.8rem;
+
+}
+.card .date h6 {
+  margin: 0;
+  font-weight: 500;
+
+}
+
+/* member */
+.card .member {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 0;
+}
+.card .member img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #6c63ff;
+  object-fit: cover;
+}
+.card .member button {
+  background: #6c63ff;
+
+  font-size: 0.75rem;
+  padding: 0.3rem 0.8rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.card .member button:hover {
+  background: #3d37c9;
+}
+
+/* view mode efek */
 .card-view {
-margin-right: 0.3rem;
-  background-color: darkgray;
-  color: darkslategray;
-   transition: all 0.5s ease-in-out;
- transform: scale(1.5); 
+  margin: 0.3rem;
+  background: #34344f;
+
+  transition: all 0.5s ease-in-out;
+  transform: scale(1.2); 
   z-index: 100;
 }
 .card-close {
-  transition: all 0.5s ease-in-out;
-  transform: scale(1); /* efek membesar lembut */
+  transition: all 0.4s ease-in-out;
+  transform: scale(1);
   z-index: 1;
 }
-.item-flex{
-font-size:0.8rem;
-margin: 0.2rem;
-display: flex;
-justify-content: center;
-gap: 14px;
+
+/* flex container saat view */
+.item-flex {
+  font-size: 0.85rem;
+  margin: 0.4rem 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
 }
-.button-sm{
-font-size:0.7rem;
+
+/* tombol kecil saat mode view */
+.button-sm {
+  font-size: 0.7rem;
+  padding: 0.25rem 0.6rem;
 }
-.view-screen{
-position: absolute;
-left: 0;
-transition: 0.5s ease-in-out;
-background-color: #1b1b1b;
-opacity: 0.8;
-width: 100vw;
-height: 100vh;
-z-index: 99;
+
+/* overlay */
+.view-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: 0.4s ease-in-out;
+  background-color: #1b1b1b;
+  opacity: 0.75;
+  width: 100vw;
+  height: 100vh;
+  z-index: 90;
 }
 .close-screen {
-transition: 0.5s ease-out;
-opacity: 0;
+  transition: 0.4s ease-out;
+  opacity: 0;
 }
 
 </style>

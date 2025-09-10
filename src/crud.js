@@ -1,4 +1,4 @@
-import Crud from "./Crud.svelte" 
+import Crud from "./crud.svelte" 
 import { mount } from "svelte"
 
 const app = mount(Crud,{
