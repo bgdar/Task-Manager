@@ -20,25 +20,30 @@ body {
   padding: 0;
   overflow-x: hidden;
 }
-body.dark{
+body.dark {
   background-color: #333;
   color: white;
 }
 
+/* COLOR DAN BACGROUND START  */
+.cl- {
+}
+.bg- {
+}
+/* COLOR DAN BACGROUND END */
 
-.in-progress{
-  background-color:#d0f0fd ;
+.in-progress {
+  background-color: #d0f0fd;
   color: #269edc;
 }
-.pending{
-background-color:  #EEE7FB ;
-color: #A05ACF ;
+.pending {
+  background-color: #eee7fb;
+  color: #a05acf;
 }
-.completed{
-background-color: #D9FBD9 ;
-color:#38A169;
+.completed {
+  background-color: #d9fbd9;
+  color: #38a169;
 }
-
 
 @media (prefers-color-scheme: light) {
   :root {

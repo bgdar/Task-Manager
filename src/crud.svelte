@@ -1,26 +1,35 @@
 <script>
-import { FilePlus2 } from 'lucide-svelte';
-    import Nav from './crudPage/nav.svelte';
-    import MainContent from './crudPage/MainContent.svelte';
+  import Nav from "./crudPage/nav.svelte";
 
+  import { Page } from "./lib/pageStore";
+
+  import AddTask from "./crudPage/addTask.svelte";
+  import DeleteTask from "./crudPage/deleteTask.svelte";
+  import UpdateTask from "./crudPage/updateTask.svelte";
 </script>
 
 <header>
-  
-  <Nav/>
+  <Nav />
 </header>
 
-  <div class="content">
-    <MainContent/>
-  </div>
+<div class="content">
+  {#if $Page.name == "add-task"}
+    <AddTask />
+  {:else if $Page.name == "update-task"}
+    <UpdateTask />
+  {:else if $Page.name == "delete-task"}
+    <DeleteTask />
+  {:else}
+    <p>clik header</p>
+  {/if}
+</div>
 
 <style>
-header{
- width: 100vw;
-  border: 2px solid;
-display: flex;
-justify-content: space-around;
-align-content:center;
-
-}
+  header {
+    width: 100vw;
+    border: 2px solid;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+  }
 </style>

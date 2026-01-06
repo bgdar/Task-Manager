@@ -23,9 +23,12 @@ import { LayoutDashboard,ClipboardCheck, NotebookPen, Users,LogOut } from 'lucid
       </button>
     </li>
     <li>
+      <a href="/crud.html">
       <button>
-        <a href="/crud.html"><NotebookPen /> CRUD</a> 
+        <NotebookPen />
+        CRUD
       </button>
+      </a> 
     </li>
     <li>
       <button on:click={()=> HandlePage("team-members")}>
